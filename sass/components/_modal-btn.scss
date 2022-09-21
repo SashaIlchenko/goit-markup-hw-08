@@ -1,0 +1,18 @@
+.btn-close-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    @extend %align;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill var(--transition-dur-fun);
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,109 @@
+.list-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 8px;
+}
+
+.button-filter {
+    color: var(--title-text-color);
+    background-color: var(--section-grey-color);
+
+    @include font(16px, 500, 26px);
+    letter-spacing: inherit;
+
+    padding: 6px 22px;
+    transition: background-color var(--transition-dur-fun),
+        color var(--transition-dur-fun),
+        box-shadow var(--transition-dur-fun);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--primary-white-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.list-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.list-portfolio__border {
+    padding: 20px 24px;
+    /* Встановить стилі правої рамки */
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: var(--portfolio-border-color);
+
+    /* Встановить стилі нижньої рамки */
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--portfolio-border-color);
+
+    /* Встановить стилі лівої рамки */
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: var(--portfolio-border-color);
+}
+
+.list-portfolio__link {
+    display: block;
+
+    color: var(--primary-text-color);
+    transition: box-shadow var(--transition-dur-fun);
+
+    &:hover,
+    &:focus {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    &:hover .list-portfolio__overlay,
+    &:focus .list-portfolio__overlay {
+        transform: translateY(0%);
+    }
+}
+
+.list-portfolio__title {
+    margin-bottom: 4px;
+
+    color: var(--title-text-color);
+
+    @include font(18px, 700, 16px);
+    letter-spacing: 0.06em;
+}
+
+.list-portfolio__label {
+
+    @include font($fs: 16px, $lh: 30px);
+}
+
+.list-portfolio__wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.list-portfolio__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    @include font(18px, 400, 28px);
+    text-align: left;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--primary-white-color);
+
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform var(--transition-dur-fun);
+}

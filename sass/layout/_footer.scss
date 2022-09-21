@@ -1,0 +1,61 @@
+.foot {
+    background-color: var(--hero-footer-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .logo {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.footer__contacts {
+    margin-right: 70px;
+}
+
+
+
+.list-contacts__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer {
+    display: flex;
+    align-items: baseline;
+}
+
+.list-contacts__link {
+    display: block;
+    @include font ($lh: 24px);
+    font-style: normal;
+    /*исходный текст был курсивным, поэтому поставила font-style: normal */
+    color: var(--grey-shadow);
+
+    transition: color var(--transition-dur-fun);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.address-link {
+    color: var(--primary-white-color);
+}
+
+.footer__title {
+    @include font ($fw: 700, $lh: 16px);
+    color: var(--primary-white-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.dark {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-link__icon-dark {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-white-color);
+}

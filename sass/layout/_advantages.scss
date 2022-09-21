@@ -1,0 +1,36 @@
+.list-about__title {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    @include font (14px, 700, 16px);
+    text-transform: uppercase;
+}
+
+.list-about__text {
+    @include font (14px, 400, 24px);
+}
+
+.list-about {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.list-about__item {
+    flex-basis: calc((100% - 90px)/4);
+}
+
+.list-about__thumb {
+    @extend %align;
+
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+
+    background-color: var(--section-grey-color);
+    border-radius: 4px;
+}
+
+.list-about__logo {
+    width: 70px;
+    height: 70px;
+}
