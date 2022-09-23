@@ -83,6 +83,8 @@ img {
 
 .list-nav,
 .list-about,
+.mobmenu-list,
+.mob-socail-list,
 .list-tasks,
 .list-staff,
 .list-contacts,
@@ -149,6 +151,44 @@ img {
   pointer-events: none;
 }
 
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-white-color);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition-dur-fun), visability var(--transition-dur-fun);
+  }
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-menu__close-btn {
+    position: absolute;
+    top: 48px;
+    right: 15px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 0;
+  }
+  .mobile-menu__close-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 .modal {
   position: absolute;
   top: 50%;
