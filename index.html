@@ -20,7 +20,7 @@
 <body>
   <!-- Шапка сторінки -->
   <header class="main-header">
-    <div class="conteiner main-nav">
+    <div class="container main-nav">
 
       <nav class="site-nav">
         <a class="logo" href="./index.html"><span class="logo__part">Web</span>Studio</a>
@@ -46,8 +46,8 @@
           </svg>+38 096 111 11 11</a>
       </div>
     </div>
-    <div class="mobile-menu" data-menu>
-      <div class="container mobile-menu__container">
+    <div class="mobile-menu container mobile-menu__container" data-menu>
+      <div class=" ">
         <button class="mobile-menu__close-btn" data-menu-close>
           <svg class="mobile-menu__close-icon" width="40px" height="40px">
             <use href="./images/icons.svg#icon-close"></use>
@@ -64,35 +64,33 @@
             <a class="mobmenu-list__link" href="#">Контакти</a>
           </li>
         </ul>
+        <div class="mail-tell-header">
+          <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a>
+          <ul class="mob-socail-list">
+            <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://www.instagram.com/"
+                target="_blank" rel="noopener noreferrer nofollow">Instagram</li>
+            <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://twitter.com/"
+                target="_blank" rel="noopener noreferrer nofollow">Twitter</li>
+            <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://www.facebook.com/"
+                target="_blank" rel="noopener noreferrer nofollow">Facebook</li>
+            <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://www.linkedin.com/"
+                target="_blank" rel="noopener noreferrer nofollow">linkedin</li>
+          </ul>
+        </div>
       </div>
-      <div class="mail-tell-header">
-        <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        <a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a>
-        <ul class="mob-socail-list">
-          <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://www.instagram.com/"
-              target="_blank" rel="noopener noreferrer nofollow">Instagram</li>
-          <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://twitter.com/"
-              target="_blank" rel="noopener noreferrer nofollow">Twitter</li>
-          <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://www.facebook.com/"
-              target="_blank" rel="noopener noreferrer nofollow">Facebook</li>
-          <li class="mob-socail-list__item"><a class="mob-socail-list__link link" href="https://www.linkedin.com/"
-              target="_blank" rel="noopener noreferrer nofollow">linkedin</li>
-        </ul>
-      </div>
-    </div>
-    <!--Мобільне меню-->
+      <!--Мобільне меню-->
   </header>
   <main>
-
     <section class="hero">
-      <div class="conteiner">
+      <div class="container">
         <h1 class="hero__promo-title">Ефективні рішення для вашого бізнесу</h1>
         <button type="button" class="button buttons" data-modal-open>Замовити послугу</button>
       </div>
     </section>
     <section class="section">
       <!--заголовок буде скритий-->
-      <div class="conteiner">
+      <div class="container">
         <h2 class="visually-hidden">Наші особливості</h2>
         <ul class="list-about">
           <li class="list-about__item">
@@ -131,7 +129,7 @@
       </div>
     </section>
     <section class="section section-nopad">
-      <div class="conteiner">
+      <div class="container">
         <h2 class="section__title">Чим ми займаємося</h2>
         <ul class="list-tasks">
           <li class="list-tasks__item">
@@ -154,13 +152,20 @@
       </div>
     </section>
     <section class="our-team section">
-      <div class="conteiner">
+      <div class="container">
         <h2 class="section__title">Наша команда</h2>
         <ul class="list-staff">
           <li class="list-staff__item">
-            <img src="./images/photo-1.jpg" alt="Igor's photo" width="270" height="260">
+            <picture>
+              <source srcset="./images/photo-1.jpg 1x, ./images/photo-1@2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/tablet/photo-1-tab.jpg 1x, ./images/tablet/photo-1-tab@2x.jpg 2x"
+                media="(min-width:768px)">
+              <source srcset="./images/mobile/photo-1-mob.jpg 1x, ./images/mobile/photo-1-mob@2x.jpg 2x"
+                media="(max-width: 767px)">
+              <img src="./images/photo-1.jpg" alt="Igor's photo" width="270" height="260">
+            </picture>
             <div class="list-staff__cards">
-              <h3 class="list-staff__title">Ігор Дем'яненко </h3>
+              <h3 class="list-staff__title">Ігор Дем'яненко</h3>
               <p class="list-staff__position">Product Designer</p>
               <ul class="list-social-network">
                 <li class="list-social-network__item"> <a class="social-link link" href="https://www.instagram.com/"
@@ -168,17 +173,17 @@
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-instagram-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://twitter.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://twitter.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Твіттер"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-twitter-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://www.facebook.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://www.facebook.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Фейсбук"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-facebook-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://www.linkedin.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://www.linkedin.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Лінкедин"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-linkedin-logo"></use>
@@ -187,7 +192,14 @@
             </div>
           </li>
           <li class="list-staff__item">
-            <img src="./images/photo-2.jpg" alt="Olga's photo" width="270" height="260">
+            <picture>
+              <source srcset="./images/photo-2.jpg 1x, ./images/photo-2@2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/tablet/photo-2-tab.jpg 1x, ./images/tablet/photo-2-tab@2x.jpg 2x"
+                media="(min-width:768px)">
+              <source srcset="./images/mobile/photo-2-mob.jpg 1x, ./images/mobile/photo-2-mob@2x.jpg 2x"
+                media="(max-width: 767px)">
+              <img src="./images/photo-2.jpg" alt="Olga's photo" width="270" height="260">
+            </picture>
             <div class="list-staff__cards">
               <h3 class="list-staff__title">Ольга Рєпіна</h3>
               <p class="list-staff__position">Frontend Developer</p>
@@ -197,17 +209,17 @@
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-instagram-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://twitter.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://twitter.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Твіттер"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-twitter-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://www.facebook.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://www.facebook.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Фейсбук"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-facebook-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://www.linkedin.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://www.linkedin.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Лінкедин"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-linkedin-logo"></use>
@@ -216,7 +228,14 @@
             </div>
           </li>
           <li class="list-staff__item">
-            <img src="./images/photo-3.jpg" alt="Mykola's photo" width="270" height="260">
+            <picture>
+              <source srcset="./images/photo-3.jpg 1x, ./images/photo-3@2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/tablet/photo-3-tab.jpg 1x, ./images/tablet/photo-3-tab@2x.jpg 2x"
+                media="(min-width:768px)">
+              <source srcset="./images/mobile/photo-3-mob.jpg 1x, ./images/mobile/photo-3-mob@2x.jpg 2x"
+                media="(max-width: 767px)">
+              <img src="./images/photo-3.jpg" alt="Mykola's photo" width="270" height="260">
+            </picture>
             <div class="list-staff__cards">
               <h3 class="list-staff__title">Микола Тарасов</h3>
               <p class="list-staff__position">Marketing</p>
@@ -245,7 +264,14 @@
             </div>
           </li>
           <li class="list-staff__item">
-            <img src="./images/photo-4.jpg" alt="Mykhaylo's photo" width="270" height="260">
+            <picture>
+              <source srcset="./images/photo-4.jpg 1x, ./images/photo-4@2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/tablet/photo-4-tab.jpg 1x, ./images/tablet/photo-4-tab@2x.jpg 2x"
+                media="(min-width:768px)">
+              <source srcset="./images/mobile/photo-4-mob.jpg 1x, ./images/mobile/photo-4-mob@2x.jpg 2x"
+                media="(max-width: 767px)">
+              <img src="./images/photo-4.jpg" alt="Mykhaylo's photo" width="270" height="260">
+            </picture>
             <div class="list-staff__cards">
               <h3 class="list-staff__title">Михайло Єрмаков</h3>
               <p class="list-staff__position">UI Designer</p>
@@ -255,17 +281,17 @@
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-instagram-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://twitter.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://twitter.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Твіттер"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-twitter-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://www.facebook.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://www.facebook.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Фейсбук"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-facebook-logo"></use>
                     </svg></a></li>
-                <li class="list-social-network__item"><a class="social-link link"" href=" https://www.linkedin.com/"
+                <li class="list-social-network__item"><a class="social-link link" href=" https://www.linkedin.com/"
                     target="_blank" rel="noopener noreferrer nofollow"><svg aria-label="логотип Лінкедин"
                       class="social-link__icon">
                       <use href="./images/icons.svg#icon-linkedin-logo"></use>
@@ -277,7 +303,7 @@
       </div>
     </section>
     <section class="section">
-      <div class="conteiner">
+      <div class="container">
         <h2 class="section__title">Постійні клієнти</h2>
         <ul class="list-clients">
           <li class="list-clients__item"><a class="list-clients__link link" href="#"><svg aria-label="логотип компанії"
@@ -310,7 +336,7 @@
     </section>
   </main>
   <footer class="foot">
-    <div class="conteiner footer">
+    <div class="container footer">
       <div class="footer__contacts"><a class="logo" href="index.html"><span class="logo__part">Web</span><span
             class="logo-dark">Studio</span></a>
         <address>
@@ -351,7 +377,7 @@
               </svg></a></li>
         </ul>
       </div>
-      <div class="footer-form-conteiner">
+      <div class="footer-form-container">
         <p class="footer__title">
           Підпишіться на розсилку</p>
         <form class="footer-form">
