@@ -1,5 +1,6 @@
 .footer {
     display: flex;
+    text-align: center;
 }
 
 .foot {
@@ -35,7 +36,6 @@
 
 .footer__contacts {
     text-align: center;
-
 }
 
 .address-link {
@@ -43,7 +43,6 @@
 }
 
 .footer__title {
-    text-align: center;
     @include font ($fw: 700, $lh: 16px);
     color: var(--primary-white-color);
     margin-bottom: 20px;
@@ -62,15 +61,12 @@
 
 @media screen and (max-width:767px) {
     .footer {
+        gap: 60px;
         flex-direction: column;
     }
 }
 
 @media screen and (min-width:768px) {
-    .foot {
-        padding-left: 76px;
-        padding-right: 89px;
-    }
 
     .footer {
         flex-wrap: wrap;
@@ -82,11 +78,13 @@
 }
 
 @media screen and (min-width:1200px) {
-    .footer__contacts {
-        margin-right: 70px;
-    }
 
     .footer {
         align-items: baseline;
+        text-align: left;
+    }
+
+    .network-links {
+        margin-left: 70px;
     }
 }
