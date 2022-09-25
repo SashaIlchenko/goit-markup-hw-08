@@ -15,4 +15,8 @@
         padding-top: 94px;
         padding-bottom: 94px;
     }
+
+    .section__title {
+        @include font(36px, 700, 42px)
+    }
 }

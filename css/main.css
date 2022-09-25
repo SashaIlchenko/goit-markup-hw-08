@@ -29,7 +29,7 @@
   overflow: hidden;
 }
 
-.button-send-email, .list-clients__link, .list-about__thumb, .social-link, .list-social-network, .modal-form__icon-checked, .btn-close-modal {
+.list-clients__link, .list-about__thumb, .social-link, .list-social-network, .modal-form__icon-checked, .btn-close-modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,6 +122,11 @@ img {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+  .section__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1666666667;
   }
 }
 @media screen and (min-width: 480px) {
@@ -724,11 +729,11 @@ img {
 }
 .list-clients {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .list-clients__item {
-  width: 170px;
   height: 92px;
 }
 
@@ -751,7 +756,27 @@ img {
   fill: currentColor;
 }
 
+@media screen and (max-width: 767px) {
+  .list-clients__item {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .list-clients__item {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-clients__item {
+    width: 170px;
+  }
+}
+.footer {
+  display: flex;
+}
+
 .foot {
+  width: 100%;
   background-color: var(--hero-footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -761,17 +786,8 @@ img {
   margin-bottom: 20px;
 }
 
-.footer__contacts {
-  margin-right: 70px;
-}
-
 .list-contacts__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer {
-  display: flex;
-  align-items: baseline;
+  margin-bottom: 8px;
 }
 
 .list-contacts__link {
@@ -780,7 +796,6 @@ img {
   font-weight: 400;
   line-height: 1.7142857143;
   font-style: normal;
-  /*исходный текст был курсивным, поэтому поставила font-style: normal */
   color: var(--grey-shadow);
   transition: color var(--transition-dur-fun);
 }
@@ -788,11 +803,16 @@ img {
   color: var(--accent-color);
 }
 
+.footer__contacts {
+  text-align: center;
+}
+
 .address-link {
   color: var(--primary-white-color);
 }
 
 .footer__title {
+  text-align: center;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.1428571429;
@@ -811,52 +831,84 @@ img {
   fill: var(--primary-white-color);
 }
 
+@media screen and (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .foot {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+  .footer {
+    flex-wrap: wrap;
+  }
+  .network-links {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    margin-right: 70px;
+  }
+  .footer {
+    align-items: baseline;
+  }
+}
 .footer-form-container {
-  margin-left: auto;
+  margin: 0 auto;
+}
+
+/*.footer-form-container {
+    margin-left: auto;
 }
 
 .footer-form__label {
-  width: 358px;
-  height: 50px;
-  padding-left: 16px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.25;
-  color: var(--primary-white-color);
-  background-color: var(--hero-footer-color);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: border-color var(--transition-dur-fun);
-}
-.footer-form__label::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.footer-form__label:focus {
-  border-color: var(--accent-color);
-  outline: none;
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+
+    @include font($fs: 16px, $lh: 20px);
+
+    color: var(--primary-white-color);
+    background-color: var(--hero-footer-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: border-color var(--transition-dur-fun);
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus {
+        border-color: var(--accent-color);
+        outline: none;
+    }
 }
 
 .footer-form {
-  display: flex;
-  gap: 12px;
+    display: flex;
+    gap: 12px;
 }
 
 .button-send-email {
-  padding: 10px 28px;
-  margin: 0 auto;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
-  font-family: inherit;
+    @extend %align;
+    padding: 10px 28px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+
+    text-align: center;
+    font-family: inherit;
 }
 
 .button-send-email__icon {
-  margin-left: 10px;
-  fill: currentColor;
-}
-
+    margin-left: 10px;
+    fill: currentColor;
+} */
 .list-button {
   display: flex;
   justify-content: center;

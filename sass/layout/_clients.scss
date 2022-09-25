@@ -1,12 +1,10 @@
 .list-clients {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-
 }
 
 .list-clients__item {
-
-    width: 170px;
     height: 92px;
 }
 
@@ -33,4 +31,23 @@
     height: 60px;
 
     fill: currentColor;
+}
+
+@media screen and (max-width:767px) {
+    .list-clients__item {
+
+        width: 210px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .list-clients__item {
+        width: 226px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .list-clients__item {
+        width: 170px;
+    }
 }

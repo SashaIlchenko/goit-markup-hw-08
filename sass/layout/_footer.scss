@@ -1,4 +1,9 @@
+.footer {
+    display: flex;
+}
+
 .foot {
+    width: 100%;
     background-color: var(--hero-footer-color);
     padding-top: 60px;
     padding-bottom: 60px;
@@ -9,26 +14,15 @@
     }
 }
 
-.footer__contacts {
-    margin-right: 70px;
-}
-
-
-
 .list-contacts__item:not(:last-child) {
-    margin-bottom: 9px;
-}
-
-.footer {
-    display: flex;
-    align-items: baseline;
+    margin-bottom: 8px;
 }
 
 .list-contacts__link {
     display: block;
     @include font ($lh: 24px);
     font-style: normal;
-    /*исходный текст был курсивным, поэтому поставила font-style: normal */
+
     color: var(--grey-shadow);
 
     transition: color var(--transition-dur-fun);
@@ -39,11 +33,17 @@
     }
 }
 
+.footer__contacts {
+    text-align: center;
+
+}
+
 .address-link {
     color: var(--primary-white-color);
 }
 
 .footer__title {
+    text-align: center;
     @include font ($fw: 700, $lh: 16px);
     color: var(--primary-white-color);
     margin-bottom: 20px;
@@ -58,4 +58,35 @@
     width: 20px;
     height: 20px;
     fill: var(--primary-white-color);
+}
+
+@media screen and (max-width:767px) {
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .foot {
+        padding-left: 76px;
+        padding-right: 89px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .network-links {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .footer__contacts {
+        margin-right: 70px;
+    }
+
+    .footer {
+        align-items: baseline;
+    }
 }
