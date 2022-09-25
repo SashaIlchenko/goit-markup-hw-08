@@ -59,7 +59,7 @@
     }
 
     .contacts-container {
-        margin-top: auto;
+        margin-top: 100%;
     }
 
     .mobmenu__contacts-tell {
@@ -74,9 +74,21 @@
         color: var(--primary-text-color);
     }
 
-    .mob-socail-list {
+    .mob-social-list {
         display: flex;
+        gap: 10px;
         margin-top: 64px;
+    }
+
+    .mob-social-list__item:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    }
+
+    .mob-social-list__link {
+        @include font (18px, 500, 22px);
+        color: var(--accent-color);
     }
 }
 
