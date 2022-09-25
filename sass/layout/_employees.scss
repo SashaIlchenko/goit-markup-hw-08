@@ -37,13 +37,18 @@
     }
 
     .list-staff__item {
-        width: auto;
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 768px) {
     .list-staff {
         flex-wrap: wrap;
+
+    }
+
+    .list-staff__item {
+        flex-basis: calc((100% - 30px)/2);
     }
 }
 
