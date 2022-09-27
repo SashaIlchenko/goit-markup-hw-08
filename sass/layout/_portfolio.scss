@@ -1,6 +1,6 @@
 .list-button {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     gap: 8px;
 }
 
@@ -103,19 +103,22 @@
     color: var(--primary-white-color);
 
     overflow: auto;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform var(--transition-dur-fun);
 }
 
 @media screen and (max-width:767px) {
     .list-button {
         flex-wrap: wrap;
+        row-gap: 15px;
     }
 }
 
 @media screen and (min-width:768px) {
     .list-button {
         justify-content: center;
+        margin-bottom: 30px;
+
     }
 
     .list-portfolio__item {
